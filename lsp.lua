@@ -22,3 +22,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 require('go').setup()
 
+require'lspconfig'.pyright.setup{}
+local fsgpy = vim.api.nvim_create_augroup("PythonFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.py",
+  callback = function()
+    vim.cmd("undojoin | Neoformat")
+  end,
+  group = fsgpy,
+})
+
