@@ -1,13 +1,24 @@
 local vim = vim
 
-require'lspconfig'.gopls.setup{}
+require'lspconfig'.terraformls.setup{}
+local fsgtf = vim.api.nvim_create_augroup("TerraformFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.tf*",
+  callback = function()
+    vim.cmd[[TerraformFmt]]
+  end,
+  group = fsgtf,
+})
 
-local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+
+require'lspconfig'.gopls.setup{}
+local fsggo = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.go",
   callback = function()
    require('go.format').goimports()
   end,
-  group = format_sync_grp,
+  group = fsggo,
 })
 require('go').setup()
+

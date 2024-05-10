@@ -11,11 +11,12 @@ vim.api.nvim_exec([[
   Plug('junegunn/goyo.vim')
 
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
-  Plug('neoclide/coc.nvim')
+  Plug('junegunn/fzf.vim')
+  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
   Plug('nvim-treesitter/nvim-treesitter')
   Plug('neovim/nvim-lspconfig')
   
+  Plug('hashivim/vim-terraform')
   Plug('ray-x/go.nvim')
   Plug('ray-x/guihua.lua')
 
