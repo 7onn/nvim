@@ -10,7 +10,7 @@ vim.diagnostic.config({
     focusable = true,
     style = "minimal",
     border = "rounded",
-    source = "always", -- Show source
+    source = "always",
   },
   virtual_text = {
     spacing = 4,
@@ -19,6 +19,4 @@ vim.diagnostic.config({
   },
   severity_sort = true,
 })
-
-
 

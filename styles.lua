@@ -1,18 +1,13 @@
 local vim = vim
 local o = vim.o
 
--- Syntax
-o.syntax = "enable" -- Syntax highlight
-vim.g.editorconfig = true -- Enable EditorConfig support
-
+o.syntax = "enable"
+vim.g.editorconfig = true
 
 vim.cmd[[colorscheme dracula]]
 require("transparent").setup({
-  enable = true, -- boolean: enable transparent
-  extra_groups = { -- table/string: additional groups that should be cleared
-    -- In particular, when you set it to 'all', that means all available groups
-
-    -- example of akinsho/nvim-bufferline.lua
+  enable = true,
+  extra_groups = {
     "BufferLineTabClose",
     "BufferlineBufferSelected",
     "BufferLineFill",
@@ -20,7 +15,7 @@ require("transparent").setup({
     "BufferLineSeparator",
     "BufferLineIndicatorSelected",
   },
-  exclude = {}, -- table: groups you don't want to clear
+  exclude = {},
 })
 
 local aucmd = vim.api.nvim_create_autocmd
