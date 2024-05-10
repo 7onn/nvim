@@ -10,6 +10,7 @@ vim.api.nvim_set_keymap('n', '<Leader>|', ':vsplit<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>f', ':Files<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>b', ':Buffers<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>q', ':close<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>g', ':Goyo<CR>', {noremap = true})
 
 -- Window Resize
 vim.api.nvim_set_keymap('n', '<Leader>+', ':vertical resize +10<CR>', {noremap = true})
