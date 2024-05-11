@@ -24,6 +24,8 @@ vim.api.nvim_set_keymap('n', '<C-e>', '$', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-A>', 'V^', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-E>', 'V$', {noremap = true})
 
+vim.api.nvim_set_keymap('n', 'gd', '<Plug>(coc-definition)', {silent = true, noremap = true})
+vim.api.nvim_set_keymap('n', 'gt', '<Plug>(coc-type-definition)', {silent = true, noremap = true})
 
 
 local aucmd = vim.api.nvim_create_autocmd
