@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
   Plug('neovim/nvim-lspconfig')
+  Plug 'ray-x/lsp_signature.nvim'
   Plug 'sbdchd/neoformat'
 
   

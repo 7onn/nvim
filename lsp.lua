@@ -10,7 +10,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   group = fsgtf,
 })
 
-
 require'lspconfig'.gopls.setup{}
 local fsggo = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -30,5 +29,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.cmd("undojoin | Neoformat")
   end,
   group = fsgpy,
+})
+
+require('lsp_signature').setup({
+  bind = true, 
+  handler_opts = {
+    border = "rounded"
+  }
 })
 

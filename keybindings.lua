@@ -2,6 +2,10 @@ local vim = vim
 
 vim.api.nvim_set_var('mapleader', ' ')
 
+-- Prevent plus and minus from moving cursor
+vim.api.nvim_set_keymap('v', '+', '<nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '-', '<nop>', { noremap = true, silent = true })
+
 -- Window split
 vim.api.nvim_set_keymap('n', '<Leader>_', ':split<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Leader>|', ':vsplit<CR>', {noremap = true})
@@ -24,9 +28,14 @@ vim.api.nvim_set_keymap('n', '<C-e>', '$', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-A>', 'V^', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-S-E>', 'V$', {noremap = true})
 
+-- Programming
 vim.api.nvim_set_keymap('n', 'gd', '<Plug>(coc-definition)', {silent = true, noremap = true})
 vim.api.nvim_set_keymap('n', 'gt', '<Plug>(coc-type-definition)', {silent = true, noremap = true})
+vim.api.nvim_set_keymap('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
+vim.api.nvim_set_keymap('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<S-Tab>"', {expr = true})
 
+
+vim.api.nvim_set_keymap('n', '<Leader>k', ':lua vim.lsp.buf.signature_help()<CR>', {noremap = true})
 
 local aucmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
