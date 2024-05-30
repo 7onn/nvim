@@ -1,6 +1,5 @@
 {
     "coc.preferences.jumpCommand": "vsplit",
-    "python.jediEnabled": true,
     "jedi.enable": true,
     "jedi.executable.command": "jedi-language-server",
     "jedi.hover.enable": false,
