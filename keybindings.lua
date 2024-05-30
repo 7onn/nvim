@@ -5,6 +5,9 @@ vim.api.nvim_set_var('mapleader', ' ')
 -- Prevent plus and minus from moving cursor
 vim.api.nvim_set_keymap('v', '+', '<nop>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '-', '<nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '+', '<nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '-', '<nop>', { noremap = true, silent = true })
+
 
 -- Window split
 vim.api.nvim_set_keymap('n', '<Leader>_', ':split<CR>', {noremap = true})
