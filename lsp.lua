@@ -21,6 +21,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 require('go').setup()
 
+
+-- vim.g.python3_host_prog = "/opt/homebrew/bin/python3.10"
 require'lspconfig'.pyright.setup{}
 local fsgpy = vim.api.nvim_create_augroup("PythonFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {

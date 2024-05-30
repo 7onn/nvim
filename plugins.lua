@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug('nvim-treesitter/nvim-treesitter')
 
   Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
   Plug('neovim/nvim-lspconfig')
   Plug 'ray-x/lsp_signature.nvim'
   Plug 'sbdchd/neoformat'
