@@ -36,13 +36,6 @@ vim.api.nvim_set_keymap('v', '<C-a>', '^', {noremap = true})
 vim.api.nvim_set_keymap('v', '<C-e>', '$', {noremap = true})
 vim.api.nvim_set_keymap('v', '<C-S-A>', 'V^', {noremap = true})
 vim.api.nvim_set_keymap('v', '<C-S-E>', 'V$', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-f>', 'k', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-b>', 'h', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-a>', '^', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-e>', '$', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-S-A>', 'V^', {noremap = true})
-vim.api.nvim_set_keymap('i', '<C-S-E>', 'V$', {noremap = true})
-
 
 -- Programming
 vim.api.nvim_set_keymap('n', 'gd', '<Plug>(coc-definition)', {silent = true, noremap = true})
