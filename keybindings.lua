@@ -56,3 +56,16 @@ aucmd("FileType", {
   command = "nnoremap <buffer> q <cmd>quit<cr>",
 })
 
+
+-- Lazy macros
+function add_journal_entry()
+    local date = os.date("%Y-%m-%d")
+     vim.api.nvim_put(
+      {
+        "# " .. date .. " ",
+        "- "
+      }, 'l', true, true)
+end
+
+vim.api.nvim_set_keymap('n', '<leader>#', ':lua add_journal_entry()<CR>', { noremap = true, silent = true })
+
